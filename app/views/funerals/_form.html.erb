@@ -1,0 +1,122 @@
+<%= form_with(model: funeral) do |form| %>
+  <% if funeral.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(funeral.errors.count, "error") %> prohibited this funeral from being saved:</h2>
+
+      <ul>
+        <% funeral.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :first_name, style: "display: block" %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= form.label :middle_name, style: "display: block" %>
+    <%= form.text_field :middle_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= form.label :date_of_birth, style: "display: block" %>
+    <%= form.datetime_field :date_of_birth %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div>
+    <%= form.label :street_address, style: "display: block" %>
+    <%= form.text_field :street_address %>
+  </div>
+
+  <div>
+    <%= form.label :apt_or_suite_number, style: "display: block" %>
+    <%= form.text_field :apt_or_suite_number %>
+  </div>
+
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.label :state, style: "display: block" %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div>
+    <%= form.label :zip, style: "display: block" %>
+    <%= form.text_field :zip %>
+  </div>
+
+  <div>
+    <%= form.label :funeral_home_name, style: "display: block" %>
+    <%= form.text_field :funeral_home_name %>
+  </div>
+
+  <div>
+    <%= form.label :funeral_home_city, style: "display: block" %>
+    <%= form.text_field :funeral_home_city %>
+  </div>
+
+  <div>
+    <%= form.label :name_of_deceased, style: "display: block" %>
+    <%= form.text_field :name_of_deceased %>
+  </div>
+
+  <div>
+    <%= form.label :purchase_amount, style: "display: block" %>
+    <%= form.number_field :purchase_amount %>
+  </div>
+
+  <div>
+    <%= form.label :credit_check_authorized, style: "display: block" %>
+    <%= form.check_box :credit_check_authorized %>
+  </div>
+
+  <div>
+    <%= form.label :electronic_disclosures_authorized, style: "display: block" %>
+    <%= form.check_box :electronic_disclosures_authorized %>
+  </div>
+
+  <div>
+    <%= form.label :bank_name, style: "display: block" %>
+    <%= form.text_field :bank_name %>
+  </div>
+
+  <div>
+    <%= form.label :bank_account_number, style: "display: block" %>
+    <%= form.text_field :bank_account_number %>
+  </div>
+
+  <div>
+    <%= form.label :bank_routing_number, style: "display: block" %>
+    <%= form.text_field :bank_routing_number %>
+  </div>
+
+  <div>
+    <%= form.label :automatic_withdrawal_authorized, style: "display: block" %>
+    <%= form.check_box :automatic_withdrawal_authorized %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
