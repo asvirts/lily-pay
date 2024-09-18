@@ -19,7 +19,7 @@ gem "jbuilder"
 
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'plaid'
-gem 'dotenv', '~> 3.1', '>= 3.1.2'
+gem 'dotenv', '~> 3.1'
 
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
